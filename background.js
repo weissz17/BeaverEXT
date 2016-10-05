@@ -10,11 +10,7 @@ chrome.alarms.onAlarm.addListener(timeThing);
 
 //function time thing contains all of the time based events. Notification popping up and such. Classes and what not.
 function timeThing() {
-    var days = new Date();
-    var wDay = days.getDay();
-    var hourDays = days.getHours();
-    var minuteDays = days.getMinutes();
-    console.log(wDay)
+  
         //this is to call the infor from the storage function. This was annoying to get working but this is how to make that work.
     chrome.storage.sync.get({
         'firstClass': 'wdawddaw',
@@ -27,9 +23,13 @@ function timeThing() {
         var classC = items.thirdClass;
         var classD = items.fourthClass;
         console.log("alarm");
+        var days = new Date();
+        var wDay = days.getDay();
+        var hourDays = days.getHours();
+        var minuteDays = days.getMinutes();
+        console.log(wDay);
 
-
-        document.addEventListener('DOMContentLoaded', function() {
+        //document.addEventListener('DOMContentLoaded', function() {
 
 
             //Add all of the if statements here. Notifications as well as the next class push on the popup.html. Still need to add that
@@ -181,7 +181,7 @@ function timeThing() {
 
             }
             //Wednesday ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-            if (wDay = 3) {
+            if (wDay === 3) {
                 console.log("today is Wednesday");
                 //Block one - B
                 if (hourDays == 8 && minuteDays == 0) {
@@ -236,7 +236,7 @@ function timeThing() {
                 }
 
                 //next block 4 update -C
-                if (hourDays == 13 && minuteDays == 17) {
+                if (hourDays == 13 && minuteDays == 0) {
                     console.log("Its C on Wendesays");
                     document.getElementById('nextClass').innerHTML = classC;
                 }
@@ -368,7 +368,7 @@ function timeThing() {
 
             }
 
-        }); //closing for the load document
+      //  }); //closing for the load document
     }); //Closing for the get storage sync
 
 } //Close for the function timeThing
