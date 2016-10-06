@@ -50,11 +50,139 @@ document.addEventListener('DOMContentLoaded', function() {
 });
 
 
+function displayNextClass() {
+    chrome.storage.sync.get({
+        'firstClass': 'wdawddaw',
+        'secondClass': 'Mathqw',
+        'thirdClass': 'freeee',
+        'fourthClass': 'trhththth'
+    }, function(items) {
+        var classA = items.firstClass;
+        var classB = items.secondClass;
+        var classC = items.thirdClass;
+        var classD = items.fourthClass;
+        var days = new Date();
+        var wDay = days.getDay();
+        var hourDays = days.getHours();
+        var minuteDays = days.getMinutes();
+
+        //  Monday
+        if (wDay == 1) {
+            if (((hourDays > 0) && (hourDays < 9)) || (hourDays == 9 && minuteDays < 15)) {
+                document.getElementById('nextClass').innerHTML = classA;
+
+            }
+            if ((hourDays == 9 && minuteDays > 15) || (hourDays == 10)) {
+                document.getElementById('nextClass').innerHTML = classB;
+            }
+
+            //next block 3 update -C
+            if ((hourDays >= 11) && (hourDays <= 13)) {
+                document.getElementById('nextClass').innerHTML = classC;
+            }
+
+            //next block 4 update -D
+            if (hourDays >= 14) {
+                document.getElementById('nextClass').innerHTML = classD;
+            }
+        }
+
+        //Tuesday
+        if (wDay == 2) {
+            if (((hourDays > 0) && (hourDays < 8)) || (hourDays == 8 && minuteDays < 15)) {
+                document.getElementById('nextClass').innerHTML = classC;
+
+            }
+
+            if ((hourDays == 8 && minuteDays > 15) || (hourDays = 10)) {
+                document.getElementById('nextClass').innerHTML = classD;
+            }
+            //next block 3 update -A
+            if ((hourDays >= 11) && (hourDays <= 13)) {
+                document.getElementById('nextClass').innerHTML = classA;
+            }
+
+            //next block 4 update -B
+            if (hourDays >= 14) {
+                document.getElementById('nextClass').innerHTML = classB;
+            }
+        }
+
+        //  Wednesday
+        if (wDay == 3) {
 
 
+          if (((hourDays > 0) && (hourDays < 8)) || (hourDays == 8 && minuteDays < 15)) {
+              document.getElementById('nextClass').innerHTML = classB;
+
+          }
+
+            //next block 2 update -D
+            if ((hourDays == 8 && minuteDays > 15) || (hourDays == 10)) {
+                document.getElementById('nextClass').innerHTML = classD;
+            }
+
+            //next block 3 update -A
+            if ((hourDays >= 11) && (hourDays <= 13)) {
+                document.getElementById('nextClass').innerHTML = classA;
+            }
+
+            //next block 4 update -B
+            if (hourDays >= 14) {
+                document.getElementById('nextClass').innerHTML = classC;
+            }
+        }
+
+        //Thursday
+        if (wDay == 4) {
+
+          if (((hourDays > 0) && (hourDays < 8)) || (hourDays == 8 && minuteDays < 15)) {
+              document.getElementById('nextClass').innerHTML = classD;
+
+          }
+            //next block 2 update -C
+            if ((hourDays == 8 && minuteDays > 15) || (hourDays == 10)) {
+                document.getElementById('nextClass').innerHTML = classC;
+            }
+
+            //next block 3 update -B
+            if ((hourDays >= 11) && (hourDays <= 13)) {
+                document.getElementById('nextClass').innerHTML = classB;
+            }
+
+            //next block 4 update -A
+            if (hourDays >= 14) {
+                document.getElementById('nextClass').innerHTML = classA;
+            }
+        }
+
+        //    Friday
+        if (wDay == 5) {
+
+          if (((hourDays > 0) && (hourDays < 8)) || (hourDays == 8 && minuteDays < 15)) {
+              document.getElementById('nextClass').innerHTML = classA;
+
+          }
 
 
+            //next block 2 update -C
+            if ((hourDays == 8 && minuteDays > 15) || (hourDays == 10)) {
+                document.getElementById('nextClass').innerHTML = classC;
+            }
 
+            //next block 3 update -B
+            if ((hourDays >= 11) && (hourDays <= 13)) {
+                document.getElementById('nextClass').innerHTML = classB;
+            }
+
+            //next block 4 update -D
+            if (hourDays >= 14) {
+                document.getElementById('nextClass').innerHTML = classD;
+            }
+        }
+
+    });
+}
 
 //creates an alarm that goes off every .25 minutes for .5 minutes. Total of .75 minutes between alarm fires
 chrome.alarms.create("Alarmssssss", {
@@ -120,13 +248,6 @@ function timeThing() {
                     });
                 }
             }
-
-            //next block 2 update -B
-            if (hourDays == 9 && minuteDays == 30) {
-                document.getElementById('nextClass').innerHTML = classB;
-            }
-
-
             //Block two - B
             if (hourDays == 10 && minuteDays == 35) {
                 if (Notification.permission === "granted") {
@@ -338,110 +459,3 @@ function timeThing() {
         //  }); //closing for the load document
     }); //Closing for the get storage sync
 } //Close for the function timeThing
-
-function displayNextClass() {
-    chrome.storage.sync.get({
-        'firstClass': 'wdawddaw',
-        'secondClass': 'Mathqw',
-        'thirdClass': 'freeee',
-        'fourthClass': 'trhththth'
-    }, function(items) {
-        var classA = items.firstClass;
-        var classB = items.secondClass;
-        var classC = items.thirdClass;
-        var classD = items.fourthClass;
-        var days = new Date();
-        var wDay = days.getDay();
-        var hourDays = days.getHours();
-        var minuteDays = days.getMinutes();
-
-      //  Monday
-        if (wDay == 1) {
-            if ((hourDays == 9 && minuteDays > 15) || (hourDays == 10)) {
-                document.getElementById('nextClass').innerHTML = classB;
-            }
-
-            //next block 3 update -C
-            if ((hourDays >= 11) && (hourDays <= 13)) {
-                document.getElementById('nextClass').innerHTML = classC;
-            }
-
-            //next block 4 update -D
-            if (hourDays >= 14) {
-                document.getElementById('nextClass').innerHTML = classD;
-            }
-        }
-
-        //Tuesday
-        if (wDay == 2) {
-
-            if ((hourDays == 8 && minuteDays > 15) || (hourDays = 10)) {
-                document.getElementById('nextClass').innerHTML = classD;
-            }
-            //next block 3 update -A
-            if ((hourDays >= 11)&& (hourDays <= 13)) {
-                document.getElementById('nextClass').innerHTML = classA;
-            }
-
-            //next block 4 update -B
-            if (hourDays >= 14) {
-                document.getElementById('nextClass').innerHTML = classB;
-            }
-        }
-
-      //  Wednesday
-        if (wDay == 3) {
-            //next block 2 update -D
-            if ((hourDays == 8 && minuteDays > 15) || (hourDays == 10)) {
-                document.getElementById('nextClass').innerHTML = classD;
-            }
-
-            //next block 3 update -A
-            if ((hourDays >= 11)&& (hourDays <= 13)) {
-                document.getElementById('nextClass').innerHTML = classA;
-            }
-
-            //next block 4 update -B
-            if (hourDays >= 14) {
-                document.getElementById('nextClass').innerHTML = classB;
-            }
-        }
-
-        //Thursday
-        if (wDay == 4) {
-            //next block 2 update -C
-            if ((hourDays == 8 && minuteDays > 15) || (hourDays == 10)) {
-                document.getElementById('nextClass').innerHTML = classC;
-            }
-
-            //next block 3 update -B
-            if ((hourDays >= 11)&& (hourDays <= 13)) {
-                document.getElementById('nextClass').innerHTML = classB;
-            }
-
-            //next block 4 update -A
-            if (hourDays >= 14) {
-                document.getElementById('nextClass').innerHTML = classA;
-            }
-        }
-
-    //    Friday
-        if (wDay == 5) {
-            //next block 2 update -C
-            if ((hourDays == 8 && minuteDays > 15) || (hourDays == 10)) {
-                document.getElementById('nextClass').innerHTML = classC;
-            }
-
-            //next block 3 update -B
-            if ((hourDays >= 11)&& (hourDays <= 13)) {
-                document.getElementById('nextClass').innerHTML = classB;
-            }
-
-            //next block 4 update -D
-            if (hourDays >= 14) {
-                document.getElementById('nextClass').innerHTML = classD;
-            }
-        }
-
-    });
-}
