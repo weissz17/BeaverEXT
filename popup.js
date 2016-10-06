@@ -187,7 +187,7 @@ function displayNextClass() {
 //creates an alarm that goes off every .25 minutes for .5 minutes. Total of .75 minutes between alarm fires
 chrome.alarms.create("Alarmssssss", {
     delayInMinutes: 0.25,
-    periodInMinutes: 0.26
+    periodInMinutes: 0.5
 });
 
 // on alarm fire calls the function time thing
@@ -238,7 +238,7 @@ function timeThing() {
         }
 
         //Monday ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-        if (wDay == 1) {
+        if (wDay === 1) {
             //Block one - A
             if (hourDays == 9 && minuteDays == 0) {
                 if (Notification.permission === "granted") {
@@ -281,7 +281,7 @@ function timeThing() {
             }
         }
         //Tuesday ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-        if (wDay == 2) {
+        else if (wDay === 2) {
             //Block one - C
             if (hourDays == 8 && minuteDays == 0) {
                 if (Notification.permission === "granted") {
@@ -304,6 +304,7 @@ function timeThing() {
 
             //Block three - A
             if (hourDays == 13 && minuteDays == 5) {
+              console.log("hello block e approaching");
                 if (Notification.permission === "granted") {
                     var notification = new Notification(classA, {
                         icon: "icon128tr.png",
@@ -326,7 +327,7 @@ function timeThing() {
 
 
         //Wednesday ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-        if (wDay === 3) {
+      else if (wDay === 3) {
             console.log("today is Wednesday");
             //Block one - B
             if (hourDays == 8 && minuteDays == 0) {
@@ -369,7 +370,7 @@ function timeThing() {
             }
         }
         //Thursday ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-        if (wDay == 1) {
+        else if (wDay === 4) {
             //Block one - D
             if (hourDays == 8 && minuteDays == 0) {
                 if (Notification.permission === "granted") {
@@ -411,7 +412,7 @@ function timeThing() {
             }
         }
         //Friday ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-        if (wDay == 5) {
+        else if (wDay == 5) {
             //Block one - A
             if (hourDays == 8 && minuteDays == 0) {
                 if (Notification.permission === "granted") {
