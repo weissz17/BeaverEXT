@@ -72,7 +72,7 @@ function displayNextClass() {
                 document.getElementById('nextClass').innerHTML = classA;
 
             }
-            if ((hourDays == 9 && minuteDays > 15) || (hourDays == 10)) {
+            if ((hourDays == 9 && minuteDays > 15) || (hourDays == 10 && hourDays >= 9 )) {
                 document.getElementById('nextClass').innerHTML = classB;
             }
 
@@ -94,7 +94,7 @@ function displayNextClass() {
 
             }
 
-            if ((hourDays == 8 && minuteDays > 15) || (hourDays = 10)) {
+            if ((hourDays == 8 && minuteDays > 15) || (hourDays <= 10 && hourDays >= 9 )) {
                 document.getElementById('nextClass').innerHTML = classD;
             }
             //next block 3 update -A
@@ -118,7 +118,7 @@ function displayNextClass() {
           }
 
             //next block 2 update -D
-            if ((hourDays == 8 && minuteDays > 15) || (hourDays == 10)) {
+            if ((hourDays == 8 && minuteDays > 15) || (hourDays <= 10 && hourDays >= 9 )) {
                 document.getElementById('nextClass').innerHTML = classD;
             }
 
@@ -141,7 +141,7 @@ function displayNextClass() {
 
           }
             //next block 2 update -C
-            if ((hourDays == 8 && minuteDays > 15) || (hourDays == 10)) {
+            if ((hourDays == 8 && minuteDays > 15) || (hourDays <= 10 && hourDays >= 9 )) {
                 document.getElementById('nextClass').innerHTML = classC;
             }
 
@@ -166,7 +166,7 @@ function displayNextClass() {
 
 
             //next block 2 update -C
-            if ((hourDays == 8 && minuteDays > 15) || (hourDays == 10)) {
+            if ((hourDays == 8 && minuteDays > 15) || (hourDays <= 10 && hourDays >= 9 )) {
                 document.getElementById('nextClass').innerHTML = classC;
             }
 

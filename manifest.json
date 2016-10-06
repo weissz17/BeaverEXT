@@ -2,7 +2,7 @@
   "manifest_version": 2,
 
   "name": "BeaverEXT",
-  "description": "An extension for beaver students",
+  "description": "An extension for Beaver students",
   "version": "0.0.2",
 
   "browser_action": {
