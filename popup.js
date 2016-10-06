@@ -41,8 +41,8 @@ document.addEventListener('DOMContentLoaded', function() {
     weekday[5] = "Friday";
     weekday[6] = "Saturday";
     document.getElementById('weekDays').innerHTML = weekday[days.getDay()];
-    document.getElementById('hourThing').innerHTML = hourDays;
-    document.getElementById('minuteThing').innerHTML = minuteDays;
+    //document.getElementById('hourThing').innerHTML = hourDays;
+    //document.getElementById('minuteThing').innerHTML = minuteDays;
 
     displayNextClass();
     //hi z
