@@ -355,34 +355,34 @@ function displayNextClass() {
 
         //Monday
         if (wDay == 1) {
-            if ((hourDays == 9 && minuteDays > 15) || (hourDays == 10 && minuteDays < 25)  ) {
+            if ((hourDays == 9 && minuteDays > 15) || (hourDays == 10)) {
                 document.getElementById('nextClass').innerHTML = classB;
             }
 
             //next block 3 update -C
-            if (hourDays == 11 && minuteDays == 0) {
+            if (hourDays >= 11 && hourDays =< 13) {
                 document.getElementById('nextClass').innerHTML = classC;
             }
 
             //next block 4 update -D
-            if (hourDays == 13 && minuteDays == 35) {
+            if (hourDays >= 14) {
                 document.getElementById('nextClass').innerHTML = classD;
             }
         }
+
         //Tuesday
         if (wDay == 2) {
 
-            if ((hourDays == 8 && minuteDays > 15) || (hourDays == 10 && minuteDays < 25)) {
+            if ((hourDays == 8 && minuteDays > 15) || (hourDays = 10)) {
                 document.getElementById('nextClass').innerHTML = classD;
             }
-
             //next block 3 update -A
-            if (hourDays == 11 && minuteDays == 0) {
+            if ((hourDays >= 11)&& (hourDays =< 13)) {
                 document.getElementById('nextClass').innerHTML = classA;
             }
 
             //next block 4 update -B
-            if (hourDays == 13 && minuteDays == 35) {
+            if (hourDays >= 14) {
                 document.getElementById('nextClass').innerHTML = classB;
             }
         }
@@ -390,51 +390,53 @@ function displayNextClass() {
         //Wednesday
         if (wDay == 3) {
             //next block 2 update -D
-            if ((hourDays == 8 && minuteDays > 15) || (hourDays == 10 && minuteDays < 25)) {
+            if ((hourDays == 8 && minuteDays > 15) || (hourDays == 10)) {
                 document.getElementById('nextClass').innerHTML = classD;
             }
 
             //next block 3 update -A
-            if (hourDays == 11 && minuteDays == 0) {
+            if ((hourDays >= 11)&& (hourDays =< 13)) {
                 document.getElementById('nextClass').innerHTML = classA;
             }
 
             //next block 4 update -B
-            if (hourDays == 13 && minuteDays == 35) {
+            if (hourDays >= 14) {
                 document.getElementById('nextClass').innerHTML = classB;
             }
         }
+
         //Thursday
         if (wDay == 4) {
             //next block 2 update -C
-            if ((hourDays == 8 && minuteDays > 15) || (hourDays == 10 && minuteDays < 25)) {
+            if ((hourDays == 8 && minuteDays > 15) || (hourDays == 10)) {
                 document.getElementById('nextClass').innerHTML = classC;
             }
 
             //next block 3 update -B
-            if (hourDays == 11 && minuteDays == 0) {
+            if ((hourDays >= 11)&& (hourDays =< 13)) {
                 document.getElementById('nextClass').innerHTML = classB;
             }
 
             //next block 4 update -A
-            if (hourDays == 13 && minuteDays == 35) {
+            if (hourDays >= 14) {
                 document.getElementById('nextClass').innerHTML = classA;
             }
         }
+
         //Friday
         if (wDay == 5) {
             //next block 2 update -C
-            if ((hourDays == 8 && minuteDays > 15) || (hourDays == 10 && minuteDays < 25)) {
+            if ((hourDays == 8 && minuteDays > 15) || (hourDays == 10)) {
                 document.getElementById('nextClass').innerHTML = classC;
             }
 
             //next block 3 update -B
-            if (hourDays == 11 && minuteDays == 0) {
+            if ((hourDays >= 11)&& (hourDays =< 13)) {
                 document.getElementById('nextClass').innerHTML = classB;
             }
 
             //next block 4 update -D
-            if (hourDays == 13 && minuteDays == 35) {
+            if (hourDays >= 14) {
                 document.getElementById('nextClass').innerHTML = classD;
             }
         }
