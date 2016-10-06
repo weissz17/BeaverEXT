@@ -44,7 +44,7 @@ document.addEventListener('DOMContentLoaded', function() {
     document.getElementById('hourThing').innerHTML = hourDays;
     document.getElementById('minuteThing').innerHTML = minuteDays;
 
-
+    displayNextClass();
     //hi z
     //closing things for everything. EVERYTHING
 });
@@ -202,6 +202,8 @@ function timeThing() {
             }
 
         }
+
+
         //Wednesday ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
         if (wDay === 3) {
             console.log("today is Wednesday");
@@ -353,14 +355,14 @@ function displayNextClass() {
         var hourDays = days.getHours();
         var minuteDays = days.getMinutes();
 
-        //Monday
+      //  Monday
         if (wDay == 1) {
             if ((hourDays == 9 && minuteDays > 15) || (hourDays == 10)) {
                 document.getElementById('nextClass').innerHTML = classB;
             }
 
             //next block 3 update -C
-            if (hourDays >= 11 && hourDays =< 13) {
+            if ((hourDays >= 11) && (hourDays <= 13)) {
                 document.getElementById('nextClass').innerHTML = classC;
             }
 
@@ -377,7 +379,7 @@ function displayNextClass() {
                 document.getElementById('nextClass').innerHTML = classD;
             }
             //next block 3 update -A
-            if ((hourDays >= 11)&& (hourDays =< 13)) {
+            if ((hourDays >= 11)&& (hourDays <= 13)) {
                 document.getElementById('nextClass').innerHTML = classA;
             }
 
@@ -387,7 +389,7 @@ function displayNextClass() {
             }
         }
 
-        //Wednesday
+      //  Wednesday
         if (wDay == 3) {
             //next block 2 update -D
             if ((hourDays == 8 && minuteDays > 15) || (hourDays == 10)) {
@@ -395,7 +397,7 @@ function displayNextClass() {
             }
 
             //next block 3 update -A
-            if ((hourDays >= 11)&& (hourDays =< 13)) {
+            if ((hourDays >= 11)&& (hourDays <= 13)) {
                 document.getElementById('nextClass').innerHTML = classA;
             }
 
@@ -413,7 +415,7 @@ function displayNextClass() {
             }
 
             //next block 3 update -B
-            if ((hourDays >= 11)&& (hourDays =< 13)) {
+            if ((hourDays >= 11)&& (hourDays <= 13)) {
                 document.getElementById('nextClass').innerHTML = classB;
             }
 
@@ -423,7 +425,7 @@ function displayNextClass() {
             }
         }
 
-        //Friday
+    //    Friday
         if (wDay == 5) {
             //next block 2 update -C
             if ((hourDays == 8 && minuteDays > 15) || (hourDays == 10)) {
@@ -431,7 +433,7 @@ function displayNextClass() {
             }
 
             //next block 3 update -B
-            if ((hourDays >= 11)&& (hourDays =< 13)) {
+            if ((hourDays >= 11)&& (hourDays <= 13)) {
                 document.getElementById('nextClass').innerHTML = classB;
             }
 
