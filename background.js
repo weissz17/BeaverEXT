@@ -1,16 +1,16 @@
 //creates an alarm that goes off every .25 minutes for .5 minutes. Total of .75 minutes between alarm fires
-chrome.alarms.create("Alarmssssss", {
-    delayInMinutes: 0.25,
-    periodInMinutes: 0.5
-});
+// chrome.alarms.create("Alarmssssss", {
+//     delayInMinutes: 0.25,
+//     periodInMinutes: 0.5
+// });
 
 // on alarm fire calls the function time thing
-chrome.alarms.onAlarm.addListener(timeThing);
+//chrome.alarms.onAlarm.addListener(timeThing);
 
 
 //function time thing contains all of the time based events. Notification popping up and such. Classes and what not.
 function timeThing() {
-  
+
         //this is to call the infor from the storage function. This was annoying to get working but this is how to make that work.
     chrome.storage.sync.get({
         'firstClass': 'wdawddaw',
@@ -236,8 +236,8 @@ function timeThing() {
                 }
 
                 //next block 4 update -C
-                if (hourDays == 13 && minuteDays == 0) {
-                    console.log("Its C on Wendesays");
+                if (hourDays == 20 && minuteDays == 12) {
+                    console.log("Its C on Wendesayswdwd");
                     document.getElementById('nextClass').innerHTML = classC;
                 }
 
