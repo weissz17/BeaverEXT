@@ -412,7 +412,7 @@ function timeThing() {
             }
         }
         //Friday ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-        else if (wDay == 5) {
+        else if (wDay === 5) {
             //Block one - A
             if (hourDays == 8 && minuteDays == 0) {
                 if (Notification.permission === "granted") {
