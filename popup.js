@@ -187,7 +187,7 @@ function displayNextClass() {
 //creates an alarm that goes off every .25 minutes for .5 minutes. Total of .75 minutes between alarm fires
 chrome.alarms.create("Alarmssssss", {
     delayInMinutes: 0.25,
-    periodInMinutes: 0.5
+    periodInMinutes: 0.26
 });
 
 // on alarm fire calls the function time thing
