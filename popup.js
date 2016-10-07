@@ -48,6 +48,14 @@ document.addEventListener('DOMContentLoaded', function() {
     //hi z
     //closing things for everything. EVERYTHING
 });
+//Creates an alarm that goes off every .75 minutes or 45 seconds. 
+chrome.alarms.create("Alarmssssss", {
+    delayInMinutes: 0.25,
+    periodInMinutes: 0.5
+});
+
+// on alarm fire calls the function time thing
+chrome.alarms.onAlarm.addListener(timeThing);
 
 
 function displayNextClass() {
@@ -72,7 +80,7 @@ function displayNextClass() {
                 document.getElementById('nextClass').innerHTML = classA;
 
             }
-            if ((hourDays == 9 && minuteDays > 15) || (hourDays == 10 && hourDays >= 9 )) {
+            if ((hourDays == 9 && minuteDays > 15) || (hourDays == 10 && hourDays >= 9)) {
                 document.getElementById('nextClass').innerHTML = classB;
             }
 
@@ -94,7 +102,7 @@ function displayNextClass() {
 
             }
 
-            if ((hourDays == 8 && minuteDays > 15) || (hourDays <= 10 && hourDays >= 9 )) {
+            if ((hourDays == 8 && minuteDays > 15) || (hourDays <= 10 && hourDays >= 9)) {
                 document.getElementById('nextClass').innerHTML = classD;
             }
             //next block 3 update -A
@@ -112,13 +120,13 @@ function displayNextClass() {
         if (wDay == 3) {
 
 
-          if (((hourDays > 0) && (hourDays < 8)) || (hourDays == 8 && minuteDays < 15)) {
-              document.getElementById('nextClass').innerHTML = classB;
+            if (((hourDays > 0) && (hourDays < 8)) || (hourDays == 8 && minuteDays < 15)) {
+                document.getElementById('nextClass').innerHTML = classB;
 
-          }
+            }
 
             //next block 2 update -D
-            if ((hourDays == 8 && minuteDays > 15) || (hourDays <= 10 && hourDays >= 9 )) {
+            if ((hourDays == 8 && minuteDays > 15) || (hourDays <= 10 && hourDays >= 9)) {
                 document.getElementById('nextClass').innerHTML = classD;
             }
 
@@ -136,12 +144,12 @@ function displayNextClass() {
         //Thursday
         if (wDay == 4) {
 
-          if (((hourDays > 0) && (hourDays < 8)) || (hourDays == 8 && minuteDays < 15)) {
-              document.getElementById('nextClass').innerHTML = classD;
+            if (((hourDays > 0) && (hourDays < 8)) || (hourDays == 8 && minuteDays < 15)) {
+                document.getElementById('nextClass').innerHTML = classD;
 
-          }
+            }
             //next block 2 update -C
-            if ((hourDays == 8 && minuteDays > 15) || (hourDays <= 10 && hourDays >= 9 )) {
+            if ((hourDays == 8 && minuteDays > 15) || (hourDays <= 10 && hourDays >= 9)) {
                 document.getElementById('nextClass').innerHTML = classC;
             }
 
@@ -159,14 +167,14 @@ function displayNextClass() {
         //    Friday
         if (wDay == 5) {
 
-          if (((hourDays > 0) && (hourDays < 8)) || (hourDays == 8 && minuteDays < 15)) {
-              document.getElementById('nextClass').innerHTML = classA;
+            if (((hourDays > 0) && (hourDays < 8)) || (hourDays == 8 && minuteDays < 15)) {
+                document.getElementById('nextClass').innerHTML = classA;
 
-          }
+            }
 
 
             //next block 2 update -C
-            if ((hourDays == 8 && minuteDays > 15) || (hourDays <= 10 && hourDays >= 9 )) {
+            if ((hourDays == 8 && minuteDays > 15) || (hourDays <= 10 && hourDays >= 9)) {
                 document.getElementById('nextClass').innerHTML = classC;
             }
 
@@ -183,15 +191,6 @@ function displayNextClass() {
 
     });
 }
-
-//creates an alarm that goes off every .25 minutes for .5 minutes. Total of .75 minutes between alarm fires
-chrome.alarms.create("Alarmssssss", {
-    delayInMinutes: 0.25,
-    periodInMinutes: 0.5
-});
-
-// on alarm fire calls the function time thing
-chrome.alarms.onAlarm.addListener(timeThing);
 
 
 //function time thing contains all of the time based events. Notification popping up and such. Classes and what not.
@@ -304,7 +303,7 @@ function timeThing() {
 
             //Block three - A
             if (hourDays == 13 && minuteDays == 5) {
-              console.log("hello block e approaching");
+                console.log("hello block e approaching");
                 if (Notification.permission === "granted") {
                     var notification = new Notification(classA, {
                         icon: "icon128tr.png",
@@ -327,7 +326,7 @@ function timeThing() {
 
 
         //Wednesday ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-      else if (wDay === 3) {
+        else if (wDay === 3) {
             console.log("today is Wednesday");
             //Block one - B
             if (hourDays == 8 && minuteDays == 0) {
