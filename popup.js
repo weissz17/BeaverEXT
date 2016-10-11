@@ -9,12 +9,14 @@ document.addEventListener('DOMContentLoaded', function() {
     var thingPres = document.getElementById('presThing');
     var thingSheet = document.getElementById('sheetThing');
     var lunchThing = document.getElementById('lunch');
+    var optionsss = document.getElementById('optionss');
 
 
     thingDoc.addEventListener('click', function() {
         chrome.tabs.create({
             'url': "https://docs.google.com/document/create"
-        });
+          //'url': "chrome-extension://eapacebmihnjhacdgifcdiphcgakbafn/options.html"
+          });
     });
     thingPres.addEventListener('click', function() {
         chrome.tabs.create({
@@ -29,6 +31,11 @@ document.addEventListener('DOMContentLoaded', function() {
     lunchThing.addEventListener('click', function() {
         chrome.tabs.create({
             'url': "http://www.sagedining.com/menus/beavercountryday/"
+        });
+    });
+    optionsss.addEventListener('click', function() {
+        chrome.tabs.create({
+        'url': "chrome-extension://eapacebmihnjhacdgifcdiphcgakbafn/options.html"
         });
     });
 
@@ -48,7 +55,7 @@ document.addEventListener('DOMContentLoaded', function() {
     //hi z
     //closing things for everything. EVERYTHING
 });
-//Creates an alarm that goes off every .75 minutes or 45 seconds. 
+//Creates an alarm that goes off every .75 minutes or 45 seconds.
 chrome.alarms.create("Alarmssssss", {
     delayInMinutes: 0.25,
     periodInMinutes: 0.5
