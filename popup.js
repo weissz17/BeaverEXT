@@ -15,8 +15,8 @@ document.addEventListener('DOMContentLoaded', function() {
     thingDoc.addEventListener('click', function() {
         chrome.tabs.create({
             'url': "https://docs.google.com/document/create"
-          //'url': "chrome-extension://eapacebmihnjhacdgifcdiphcgakbafn/options.html"
-          });
+                //'url': "chrome-extension://eapacebmihnjhacdgifcdiphcgakbafn/options.html"
+        });
     });
     thingPres.addEventListener('click', function() {
         chrome.tabs.create({
@@ -35,7 +35,7 @@ document.addEventListener('DOMContentLoaded', function() {
     });
     optionsss.addEventListener('click', function() {
         chrome.tabs.create({
-        'url': "chrome-extension://eapacebmihnjhacdgifcdiphcgakbafn/options.html"
+            'url': "chrome-extension://eapacebmihnjhacdgifcdiphcgakbafn/options.html"
         });
     });
 
@@ -451,7 +451,6 @@ function timeThing() {
                     });
                 }
             }
-
             //Block four - D
             if (hourDays == 14 && minuteDays == 10) {
                 if (Notification.permission === "granted") {
