@@ -176,7 +176,6 @@ function displayNextClass() {
 
             if (((hourDays > 0) && (hourDays < 8)) || (hourDays == 8 && minuteDays < 15)) {
                 document.getElementById('nextClass').innerHTML = classA;
-
             }
 
 
