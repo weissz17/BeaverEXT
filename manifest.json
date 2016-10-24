@@ -3,7 +3,7 @@
 
   "name": "BeaverEXT",
   "description": "An extension for Beaver students",
-  "version": "0.0.6",
+  "version": "0.0.7",
 
   "browser_action": {
    "default_icon": "icon48tr.png",

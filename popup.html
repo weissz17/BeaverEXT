@@ -11,10 +11,10 @@
       <!-- <p style="color:rgb(7,28,44)" >The time is  <b id='hourThing'></b>:<b id='minuteThing' > </b> </p> -->
       <p style="color:rgb(7,28,44)">Today is <b id='weekDays'> </b></p>
 
-  <button id="lunch" style="margin-bottom: 5px"> What is the lunch today </button>
-  <button id="docThing" style="margin-bottom: 5px">Create a new document </button>
-  <button id="presThing" style="margin-bottom: 5px">Create a new presentation </button>
-  <button id="sheetThing" style="margin-bottom: 5px">Create a new sheet </button>
+  <button class="btn" id="lunch" style="margin-bottom: 5px"> What is for lunch today </button>
+  <button class="btn" id="docThing" style="margin-bottom: 5px">Create a new document </button>
+  <button class="btn" id="presThing" style="margin-bottom: 5px">Create a new presentation </button>
+  <button class="btn" id="sheetThing" style="margin-bottom: 5px">Create a new sheet </button>
   <button id="optionss" style="margin-bottom: 5px">Options Page </button>
 </div>
 </html>
@@ -30,4 +30,23 @@
 div {
    font-family: myFirstFont;
 }
+
+.btn {
+  -webkit-border-radius: 8;
+    -moz-border-radius: 8;
+    border-radius: 8px;
+    font-family: Arial;
+    color: #ffffff;
+    font-size: 12px;
+    background: #071c2c;
+    padding: 5px 10px 5px 10px;
+    text-decoration: none;
+    font-family: myFirstFont;
+}
+
+.btn:hover {
+  background: #0c4c80;
+  text-decoration: none;
+}
+
 </style>
