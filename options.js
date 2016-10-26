@@ -28,10 +28,10 @@ function save_options() {
 function restore_options() {
   // Use default value color = 'red' and likesColor = true.
   chrome.storage.sync.get({
-    'firstClass': 'wdawddaw',
-    'secondClass': 'Mathqw',
-    'thirdClass': 'freeee',
-    'fourthClass': 'trhththth'
+    'firstClass': 'Run Setup',
+    'secondClass': 'Run Setup',
+    'thirdClass': 'Run Setup',
+    'fourthClass': 'Run Setup'
   }, function(items) {
     document.getElementById('first').value = items.firstClass;
     document.getElementById('second').value = items.secondClass;

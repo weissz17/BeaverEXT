@@ -15,7 +15,7 @@ document.addEventListener('DOMContentLoaded', function() {
     thingDoc.addEventListener('click', function() {
         chrome.tabs.create({
             'url': "https://docs.google.com/document/create"
-                //'url': "chrome-extension://eapacebmihnjhacdgifcdiphcgakbafn/options.html"
+                //'url': "chrome-extension://lfjpjanpjmhlihhlamhhhpipeljjhfia/options.html"
         });
     });
     thingPres.addEventListener('click', function() {
@@ -35,7 +35,7 @@ document.addEventListener('DOMContentLoaded', function() {
     });
     optionsss.addEventListener('click', function() {
         chrome.tabs.create({
-            'url': "chrome-extension://eapacebmihnjhacdgifcdiphcgakbafn/options.html"
+            'url': "chrome-extension://lfjpjanpjmhlihhlamhhhpipeljjhfia/options.html"
         });
     });
 
