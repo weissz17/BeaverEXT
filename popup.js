@@ -67,10 +67,10 @@ chrome.alarms.onAlarm.addListener(timeThing);
 
 function displayNextClass() {
     chrome.storage.sync.get({
-        'firstClass': 'wdawddaw',
-        'secondClass': 'Mathqw',
-        'thirdClass': 'freeee',
-        'fourthClass': 'trhththth'
+      'firstClass': 'Block A',
+      'secondClass': 'Block B',
+      'thirdClass': 'Block C',
+      'fourthClass': 'Block D'
     }, function(items) {
         var classA = items.firstClass;
         var classB = items.secondClass;
@@ -204,10 +204,10 @@ function timeThing() {
 
     //this is to call the infor from the storage function. This was annoying to get working but this is how to make that work.
     chrome.storage.sync.get({
-        'firstClass': 'wdawddaw',
-        'secondClass': 'Mathqw',
-        'thirdClass': 'freeee',
-        'fourthClass': 'trhththth'
+      'firstClass': 'Block A',
+      'secondClass': 'Block B',
+      'thirdClass': 'Block C',
+      'fourthClass': 'Block D'
     }, function(items) {
         var classA = items.firstClass;
         var classB = items.secondClass;
