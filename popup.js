@@ -4,6 +4,21 @@ var hourDays = days.getHours();
 var minuteDays = days.getMinutes();
 var weekday = new Array(7);
 
+var _gaq = _gaq || [];
+_gaq.push(['_setAccount', 'UA-85192704-3']);
+_gaq.push(['_trackPageview']);
+
+(function() {
+  var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+  ga.src = 'https://ssl.google-analytics.com/ga.js';
+  var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+})();
+
+function trackButtonClick(e) {
+    _gaq.push(['_trackEvent', e.target.id, 'clicked']);
+  };
+
+
 document.addEventListener('DOMContentLoaded', function() {
     var thingDoc = document.getElementById('docThing');
     var thingPres = document.getElementById('presThing');
@@ -11,6 +26,11 @@ document.addEventListener('DOMContentLoaded', function() {
     var lunchThing = document.getElementById('lunch');
     var optionsss = document.getElementById('optionss');
 
+
+    var buttons = document.querySelectorAll('button');
+      for (var i = 0; i < buttons.length; i++) {
+        buttons[i].addEventListener('click', trackButtonClick);
+      }
 
     thingDoc.addEventListener('click', function() {
         chrome.tabs.create({
@@ -31,12 +51,15 @@ document.addEventListener('DOMContentLoaded', function() {
     lunchThing.addEventListener('click', function() {
         chrome.tabs.create({
             'url': "http://www.sagedining.com/menus/beavercountryday/"
+
         });
+
     });
     optionsss.addEventListener('click', function() {
         chrome.tabs.create({
             'url': "chrome-extension://lfjpjanpjmhlihhlamhhhpipeljjhfia/options.html"
         });
+
     });
 
     //Stuff with the Date and Time
